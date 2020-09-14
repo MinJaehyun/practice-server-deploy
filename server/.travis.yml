@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - 'stable'
+services:
+  - mysql
+before_script:
+  - cd server
+  - npm ci
+  - mysql -u root --password="" -e "create database shortly"
